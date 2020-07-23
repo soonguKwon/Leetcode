@@ -12,9 +12,10 @@ class Solution:
             for x in range(0, len(matrix[0])):
                 res[x][y] = matrix[len(matrix) - y - 1][x]
 
-        for y in range(0, len(matrix)):
-            for x in range(0, len(matrix[0])):
-                matrix[y][x] = res[y][x]
+        matrix[::] = res
+        # for y in range(0, len(matrix)):
+        #     for x in range(0, len(matrix[0])):
+        #         matrix[y][x] = res[y][x]
 
         return matrix
 
